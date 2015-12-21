@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #delay 10 minute
-delay=-v-20M
+delay=-v-30M
 #image location
 location=$HOME/Pictures/himawari8
 
