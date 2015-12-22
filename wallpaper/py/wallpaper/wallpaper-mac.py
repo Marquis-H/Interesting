@@ -3,24 +3,25 @@ __author__ = 'marquis'
 import time
 import subprocess
 import os
+import shutil
 
 
 def set_wallpaper():
-    location = "$HOME/Pictures/himawari8"
-    if os.path.exists(location) == 0:
-        subprocess.call("mkdir -p $location", shell=True)
-    # subprocess.call("rm -rf $location/*", shell=True)
+    location = os.environ['HOME']+'/Pictures/himawari8'
+    if os.path.exists(location):
+        shutil.rmtree(location)
+    os.mkdir(location)
     subprocess.call("scrapy crawl FindImages", shell=True)
     time.sleep(30)
-    for filenames in os.walk(location):
-        for filename in filenames:
-            picpath = filename
-    script = """/usr/bin/osascript<<END
-                tell application "Finder"
-                set desktop picture to POSIX file "%s"
-                end tell
-                END"""
-    subprocess.call(script%picpath, shell=True)
+    f_list = os.listdir(os.environ['HOME']+'/Pictures/himawari8')
+    for img in f_list:
+        picpath = '$HOME/Pictures/himawari8/'+img
+        script = """/usr/bin/osascript<<END
+                    tell application "Finder"
+                    set desktop picture to POSIX file "%s"
+                    end tell
+                    END"""
+        subprocess.call(script % picpath, shell=True)
     print 'Done.'
 
 if __name__ == '__main__':

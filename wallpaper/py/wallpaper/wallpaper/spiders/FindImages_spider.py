@@ -13,7 +13,7 @@ class FindImagesSpider(Spider):
     start_urls = ['http://himawari8.nict.go.jp/img/D531106/latest.json']
 
     def parse(self, response):
-        sites = json.loads(response.body_as_unicode().encode('utf8'))
+        sites = json.loads(response.body_as_unicode())
         date_ = sites['date']
         # get date
         pattern = re.compile(r'(\d+)-(\d+)-(\d+) (\d+):(\d+):(\d+)')
@@ -27,7 +27,7 @@ class FindImagesSpider(Spider):
             second = result.group(6)
         else:
             pass
-        img = "http://res.cloudinary.com/dajkskdsp/image/upload/%s_%s_%s_%s_%s_%s_earth_live_photo_vps.png" \
+        img = "http://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/%s/%s/%s/%s%s%s_0_0.png" \
             % (year, month, day, hour, minute, second)
         items = []
         item = WallpaperItem()
