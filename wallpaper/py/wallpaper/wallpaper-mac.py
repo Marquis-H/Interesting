@@ -11,7 +11,8 @@ def set_wallpaper():
     if os.path.exists(location):
         shutil.rmtree(location)
     os.mkdir(location)
-    subprocess.call("scrapy crawl FindImages", shell=True)
+    # this my cwd
+    subprocess.Popen("/usr/local/bin/scrapy crawl FindImages", shell=True)
     time.sleep(30)
     f_list = os.listdir(os.environ['HOME']+'/Pictures/himawari8')
     for img in f_list:
