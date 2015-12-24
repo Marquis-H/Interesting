@@ -6,3 +6,9 @@
 
 ## 详情
 ### wallpaper
+1.himawari8官网：http://himawari8.nict.go.jp/
+2.适用平台：mac、linux
+3.开发语言：shell、python
+
+#### 安装
+
