@@ -2,6 +2,7 @@ __author__ = 'marquis'
 
 import json
 import re
+import time
 
 from scrapy.spiders import Spider
 from wallpaper.items import WallpaperItem
@@ -9,8 +10,8 @@ from wallpaper.items import WallpaperItem
 
 class FindImagesSpider(Spider):
     name = "FindImages"
-    allowed_domains = ['himawari8.nict.go.jp']
-    start_urls = ['http://himawari8.nict.go.jp/img/D531106/latest.json']
+    allowed_domains = ['himawari8-dl.nict.go.jp']
+    start_urls = ['http://himawari8-dl.nict.go.jp/himawari8/img/D531106/latest.json?uid='+str(time.time())]
 
     def parse(self, response):
         sites = json.loads(response.body_as_unicode())
