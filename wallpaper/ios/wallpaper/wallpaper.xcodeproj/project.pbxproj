@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9522BF261C2D02FA009D503A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9522BF251C2D02FA009D503A /* Alamofire.framework */; };
+		9522BF281C2D13E6009D503A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9522BF271C2D13E6009D503A /* SwiftyJSON.framework */; };
+		95EA92001C2BC490003ADD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA91FF1C2BC490003ADD68 /* AppDelegate.swift */; };
+		95EA92021C2BC490003ADD68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92011C2BC490003ADD68 /* ViewController.swift */; };
+		95EA92051C2BC490003ADD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA92031C2BC490003ADD68 /* Main.storyboard */; };
+		95EA92071C2BC490003ADD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA92061C2BC490003ADD68 /* Assets.xcassets */; };
+		95EA920A1C2BC490003ADD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA92081C2BC490003ADD68 /* LaunchScreen.storyboard */; };
+		95EA92151C2BC490003ADD68 /* wallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92141C2BC490003ADD68 /* wallpaperTests.swift */; };
+		95EA92201C2BC490003ADD68 /* wallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA921F1C2BC490003ADD68 /* wallpaperUITests.swift */; };
+		95EA92341C2BC645003ADD68 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EA92331C2BC645003ADD68 /* NotificationCenter.framework */; };
+		95EA92371C2BC645003ADD68 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92361C2BC645003ADD68 /* TodayViewController.swift */; };
+		95EA923A1C2BC645003ADD68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA92381C2BC645003ADD68 /* MainInterface.storyboard */; };
+		95EA923E1C2BC645003ADD68 /* Earth.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 95EA92311C2BC645003ADD68 /* Earth.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95EA92441C2BD35B003ADD68 /* DownloadEarthImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92431C2BD35B003ADD68 /* DownloadEarthImg.swift */; };
+		95EA92451C2BD35B003ADD68 /* DownloadEarthImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92431C2BD35B003ADD68 /* DownloadEarthImg.swift */; };
+		D6C8158A193B2CA2FA2DC807 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA330BC60659B96DE9CF70ED /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95EA92111C2BC490003ADD68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EA91F41C2BC490003ADD68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95EA91FB1C2BC490003ADD68;
+			remoteInfo = wallpaper;
+		};
+		95EA921C1C2BC490003ADD68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EA91F41C2BC490003ADD68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95EA91FB1C2BC490003ADD68;
+			remoteInfo = wallpaper;
+		};
+		95EA923C1C2BC645003ADD68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EA91F41C2BC490003ADD68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95EA92301C2BC645003ADD68;
+			remoteInfo = Earth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95EA92421C2BC645003ADD68 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				95EA923E1C2BC645003ADD68 /* Earth.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E69780175DC6A2659E2C6E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9522BF211C2D0182009D503A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		9522BF231C2D0251009D503A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		9522BF251C2D02FA009D503A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		9522BF271C2D13E6009D503A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		95EA91FC1C2BC490003ADD68 /* wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EA91FF1C2BC490003ADD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95EA92011C2BC490003ADD68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95EA92041C2BC490003ADD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95EA92061C2BC490003ADD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95EA92091C2BC490003ADD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95EA920B1C2BC490003ADD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EA92101C2BC490003ADD68 /* wallpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wallpaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EA92141C2BC490003ADD68 /* wallpaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpaperTests.swift; sourceTree = "<group>"; };
+		95EA92161C2BC490003ADD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EA921B1C2BC490003ADD68 /* wallpaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wallpaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EA921F1C2BC490003ADD68 /* wallpaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpaperUITests.swift; sourceTree = "<group>"; };
+		95EA92211C2BC490003ADD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EA92311C2BC645003ADD68 /* Earth.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Earth.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		95EA92331C2BC645003ADD68 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		95EA92361C2BC645003ADD68 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		95EA92391C2BC645003ADD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		95EA923B1C2BC645003ADD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EA92431C2BD35B003ADD68 /* DownloadEarthImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadEarthImg.swift; sourceTree = "<group>"; };
+		DA330BC60659B96DE9CF70ED /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDA9A5A0791F0E6FB5516B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95EA91F91C2BC490003ADD68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C8158A193B2CA2FA2DC807 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA920D1C2BC490003ADD68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA92181C2BC490003ADD68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA922E1C2BC645003ADD68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9522BF281C2D13E6009D503A /* SwiftyJSON.framework in Frameworks */,
+				9522BF261C2D02FA009D503A /* Alamofire.framework in Frameworks */,
+				95EA92341C2BC645003ADD68 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95EA91F31C2BC490003ADD68 = {
+			isa = PBXGroup;
+			children = (
+				95EA91FE1C2BC490003ADD68 /* wallpaper */,
+				95EA92131C2BC490003ADD68 /* wallpaperTests */,
+				95EA921E1C2BC490003ADD68 /* wallpaperUITests */,
+				95EA92351C2BC645003ADD68 /* Earth */,
+				95EA92321C2BC645003ADD68 /* Frameworks */,
+				95EA91FD1C2BC490003ADD68 /* Products */,
+				AB0D361294819654D00786ED /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		95EA91FD1C2BC490003ADD68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95EA91FC1C2BC490003ADD68 /* wallpaper.app */,
+				95EA92101C2BC490003ADD68 /* wallpaperTests.xctest */,
+				95EA921B1C2BC490003ADD68 /* wallpaperUITests.xctest */,
+				95EA92311C2BC645003ADD68 /* Earth.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95EA91FE1C2BC490003ADD68 /* wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				95EA91FF1C2BC490003ADD68 /* AppDelegate.swift */,
+				95EA92011C2BC490003ADD68 /* ViewController.swift */,
+				95EA92431C2BD35B003ADD68 /* DownloadEarthImg.swift */,
+				95EA92031C2BC490003ADD68 /* Main.storyboard */,
+				95EA92061C2BC490003ADD68 /* Assets.xcassets */,
+				95EA92081C2BC490003ADD68 /* LaunchScreen.storyboard */,
+				95EA920B1C2BC490003ADD68 /* Info.plist */,
+			);
+			path = wallpaper;
+			sourceTree = "<group>";
+		};
+		95EA92131C2BC490003ADD68 /* wallpaperTests */ = {
+			isa = PBXGroup;
+			children = (
+				95EA92141C2BC490003ADD68 /* wallpaperTests.swift */,
+				95EA92161C2BC490003ADD68 /* Info.plist */,
+			);
+			path = wallpaperTests;
+			sourceTree = "<group>";
+		};
+		95EA921E1C2BC490003ADD68 /* wallpaperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95EA921F1C2BC490003ADD68 /* wallpaperUITests.swift */,
+				95EA92211C2BC490003ADD68 /* Info.plist */,
+			);
+			path = wallpaperUITests;
+			sourceTree = "<group>";
+		};
+		95EA92321C2BC645003ADD68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9522BF271C2D13E6009D503A /* SwiftyJSON.framework */,
+				9522BF251C2D02FA009D503A /* Alamofire.framework */,
+				9522BF231C2D0251009D503A /* Alamofire.framework */,
+				9522BF211C2D0182009D503A /* Alamofire.framework */,
+				95EA92331C2BC645003ADD68 /* NotificationCenter.framework */,
+				DA330BC60659B96DE9CF70ED /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95EA92351C2BC645003ADD68 /* Earth */ = {
+			isa = PBXGroup;
+			children = (
+				95EA92361C2BC645003ADD68 /* TodayViewController.swift */,
+				95EA92381C2BC645003ADD68 /* MainInterface.storyboard */,
+				95EA923B1C2BC645003ADD68 /* Info.plist */,
+			);
+			path = Earth;
+			sourceTree = "<group>";
+		};
+		AB0D361294819654D00786ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEDA9A5A0791F0E6FB5516B5 /* Pods.debug.xcconfig */,
+				6E69780175DC6A2659E2C6E8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95EA91FB1C2BC490003ADD68 /* wallpaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EA92241C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaper" */;
+			buildPhases = (
+				42C4835C6A4876D536CD84C1 /* Check Pods Manifest.lock */,
+				95EA91F81C2BC490003ADD68 /* Sources */,
+				95EA91F91C2BC490003ADD68 /* Frameworks */,
+				95EA91FA1C2BC490003ADD68 /* Resources */,
+				95EA92421C2BC645003ADD68 /* Embed App Extensions */,
+				0FC9426E49E4DFA2A9DC8258 /* Embed Pods Frameworks */,
+				F9959D731889239F16082D6A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95EA923D1C2BC645003ADD68 /* PBXTargetDependency */,
+			);
+			name = wallpaper;
+			productName = wallpaper;
+			productReference = 95EA91FC1C2BC490003ADD68 /* wallpaper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95EA920F1C2BC490003ADD68 /* wallpaperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EA92271C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaperTests" */;
+			buildPhases = (
+				95EA920C1C2BC490003ADD68 /* Sources */,
+				95EA920D1C2BC490003ADD68 /* Frameworks */,
+				95EA920E1C2BC490003ADD68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95EA92121C2BC490003ADD68 /* PBXTargetDependency */,
+			);
+			name = wallpaperTests;
+			productName = wallpaperTests;
+			productReference = 95EA92101C2BC490003ADD68 /* wallpaperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95EA921A1C2BC490003ADD68 /* wallpaperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EA922A1C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaperUITests" */;
+			buildPhases = (
+				95EA92171C2BC490003ADD68 /* Sources */,
+				95EA92181C2BC490003ADD68 /* Frameworks */,
+				95EA92191C2BC490003ADD68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95EA921D1C2BC490003ADD68 /* PBXTargetDependency */,
+			);
+			name = wallpaperUITests;
+			productName = wallpaperUITests;
+			productReference = 95EA921B1C2BC490003ADD68 /* wallpaperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		95EA92301C2BC645003ADD68 /* Earth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95EA923F1C2BC645003ADD68 /* Build configuration list for PBXNativeTarget "Earth" */;
+			buildPhases = (
+				95EA922D1C2BC645003ADD68 /* Sources */,
+				95EA922E1C2BC645003ADD68 /* Frameworks */,
+				95EA922F1C2BC645003ADD68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Earth;
+			productName = Earth;
+			productReference = 95EA92311C2BC645003ADD68 /* Earth.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95EA91F41C2BC490003ADD68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = marquis;
+				TargetAttributes = {
+					95EA91FB1C2BC490003ADD68 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					95EA920F1C2BC490003ADD68 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 95EA91FB1C2BC490003ADD68;
+					};
+					95EA921A1C2BC490003ADD68 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 95EA91FB1C2BC490003ADD68;
+					};
+					95EA92301C2BC645003ADD68 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 95EA91F71C2BC490003ADD68 /* Build configuration list for PBXProject "wallpaper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95EA91F31C2BC490003ADD68;
+			productRefGroup = 95EA91FD1C2BC490003ADD68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95EA91FB1C2BC490003ADD68 /* wallpaper */,
+				95EA920F1C2BC490003ADD68 /* wallpaperTests */,
+				95EA921A1C2BC490003ADD68 /* wallpaperUITests */,
+				95EA92301C2BC645003ADD68 /* Earth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95EA91FA1C2BC490003ADD68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA920A1C2BC490003ADD68 /* LaunchScreen.storyboard in Resources */,
+				95EA92071C2BC490003ADD68 /* Assets.xcassets in Resources */,
+				95EA92051C2BC490003ADD68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA920E1C2BC490003ADD68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA92191C2BC490003ADD68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA922F1C2BC645003ADD68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA923A1C2BC645003ADD68 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FC9426E49E4DFA2A9DC8258 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42C4835C6A4876D536CD84C1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F9959D731889239F16082D6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95EA91F81C2BC490003ADD68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA92021C2BC490003ADD68 /* ViewController.swift in Sources */,
+				95EA92441C2BD35B003ADD68 /* DownloadEarthImg.swift in Sources */,
+				95EA92001C2BC490003ADD68 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA920C1C2BC490003ADD68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA92151C2BC490003ADD68 /* wallpaperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA92171C2BC490003ADD68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA92201C2BC490003ADD68 /* wallpaperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95EA922D1C2BC645003ADD68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95EA92451C2BD35B003ADD68 /* DownloadEarthImg.swift in Sources */,
+				95EA92371C2BC645003ADD68 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95EA92121C2BC490003ADD68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95EA91FB1C2BC490003ADD68 /* wallpaper */;
+			targetProxy = 95EA92111C2BC490003ADD68 /* PBXContainerItemProxy */;
+		};
+		95EA921D1C2BC490003ADD68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95EA91FB1C2BC490003ADD68 /* wallpaper */;
+			targetProxy = 95EA921C1C2BC490003ADD68 /* PBXContainerItemProxy */;
+		};
+		95EA923D1C2BC645003ADD68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95EA92301C2BC645003ADD68 /* Earth */;
+			targetProxy = 95EA923C1C2BC645003ADD68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95EA92031C2BC490003ADD68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95EA92041C2BC490003ADD68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95EA92081C2BC490003ADD68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95EA92091C2BC490003ADD68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		95EA92381C2BC645003ADD68 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95EA92391C2BC645003ADD68 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95EA92221C2BC490003ADD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95EA92231C2BC490003ADD68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95EA92251C2BC490003ADD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEDA9A5A0791F0E6FB5516B5 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = wallpaper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		95EA92261C2BC490003ADD68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E69780175DC6A2659E2C6E8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = wallpaper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		95EA92281C2BC490003ADD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wallpaperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper.app/wallpaper";
+			};
+			name = Debug;
+		};
+		95EA92291C2BC490003ADD68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wallpaperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper.app/wallpaper";
+			};
+			name = Release;
+		};
+		95EA922B1C2BC490003ADD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wallpaperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wallpaper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		95EA922C1C2BC490003ADD68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wallpaperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wallpaper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		95EA92401C2BC645003ADD68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = Earth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaper.Earth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		95EA92411C2BC645003ADD68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = Earth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.marquis.swift.wallpaper.Earth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95EA91F71C2BC490003ADD68 /* Build configuration list for PBXProject "wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EA92221C2BC490003ADD68 /* Debug */,
+				95EA92231C2BC490003ADD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EA92241C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EA92251C2BC490003ADD68 /* Debug */,
+				95EA92261C2BC490003ADD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EA92271C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EA92281C2BC490003ADD68 /* Debug */,
+				95EA92291C2BC490003ADD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EA922A1C2BC490003ADD68 /* Build configuration list for PBXNativeTarget "wallpaperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EA922B1C2BC490003ADD68 /* Debug */,
+				95EA922C1C2BC490003ADD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95EA923F1C2BC645003ADD68 /* Build configuration list for PBXNativeTarget "Earth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EA92401C2BC645003ADD68 /* Debug */,
+				95EA92411C2BC645003ADD68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95EA91F41C2BC490003ADD68 /* Project object */;
+}
