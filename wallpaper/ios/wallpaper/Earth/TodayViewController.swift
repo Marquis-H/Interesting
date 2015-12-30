@@ -12,7 +12,9 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var earthControl: UISegmentedControl!
+    
     var downloadEarthImg = DownloadEarthImg()
+    var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +40,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBAction func earthControlAction(sender: UISegmentedControl) {
         switch earthControl.selectedSegmentIndex{
             case 0:
-                print("\(downloadEarthImg.earthImg())")
-                print("open")
+                timer = NSTimer.scheduledTimerWithTimeInterval(1200, target: self, selector: "earthImg", userInfo: nil, repeats: true)
                 break
             case 1:
-                print("close")
+                timer.invalidate()
                 break
             default:
                 break
         }
         
+    }
+    
+    func earthImg(){
+        downloadEarthImg.earthImg()
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9522BF261C2D02FA009D503A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9522BF251C2D02FA009D503A /* Alamofire.framework */; };
 		9522BF281C2D13E6009D503A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9522BF271C2D13E6009D503A /* SwiftyJSON.framework */; };
+		956028031C328D3B0083D4D3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956028021C328D3B0083D4D3 /* AlamofireImage.framework */; };
 		95EA92001C2BC490003ADD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA91FF1C2BC490003ADD68 /* AppDelegate.swift */; };
 		95EA92021C2BC490003ADD68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA92011C2BC490003ADD68 /* ViewController.swift */; };
 		95EA92051C2BC490003ADD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA92031C2BC490003ADD68 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		9522BF231C2D0251009D503A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		9522BF251C2D02FA009D503A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		9522BF271C2D13E6009D503A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		956028021C328D3B0083D4D3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "Pods/../build/Debug-iphoneos/AlamofireImage.framework"; sourceTree = "<group>"; };
 		95EA91FC1C2BC490003ADD68 /* wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA91FF1C2BC490003ADD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EA92011C2BC490003ADD68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956028031C328D3B0083D4D3 /* AlamofireImage.framework in Frameworks */,
 				9522BF281C2D13E6009D503A /* SwiftyJSON.framework in Frameworks */,
 				9522BF261C2D02FA009D503A /* Alamofire.framework in Frameworks */,
 				95EA92341C2BC645003ADD68 /* NotificationCenter.framework in Frameworks */,
@@ -187,6 +190,7 @@
 		95EA92321C2BC645003ADD68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				956028021C328D3B0083D4D3 /* AlamofireImage.framework */,
 				9522BF271C2D13E6009D503A /* SwiftyJSON.framework */,
 				9522BF251C2D02FA009D503A /* Alamofire.framework */,
 				9522BF231C2D0251009D503A /* Alamofire.framework */,

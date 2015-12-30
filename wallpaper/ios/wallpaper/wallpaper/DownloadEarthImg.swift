@@ -9,16 +9,25 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Photos
+import AlamofireImage
 
 class DownloadEarthImg {
     
     var now: NSTimeInterval = NSDate().timeIntervalSince1970
     
+    var assetCollection: PHAssetCollection!
+    var albumFound : Bool = false
+    var photosAsset: PHFetchResult!
+    var collection: PHAssetCollection!
+    var assetCollectionPlaceholder: PHObjectPlaceholder!
+    let albumName = "Earth"
+    
     func stringFromTimeInterval(interval: NSTimeInterval)-> String{
         return NSString(format: "%f", interval) as String
     }
     
-    func earthImg()-> String{
+    func earthImg(){
         let jsonUrl:String = "http://himawari8-dl.nict.go.jp/himawari8/img/D531106/latest.json?uid="+stringFromTimeInterval(now)
         var dateDictionary = Dictionary<String, String>()
         Alamofire.request(.GET, jsonUrl)
@@ -37,34 +46,65 @@ class DownloadEarthImg {
                 //dowmload
                 self.downloadEarthImg(dateDictionary)
             }
-        return "Download..."
     }
     
     func downloadEarthImg(date:Dictionary<String, String>)-> String{
         if (date["year"] != nil){
             let dateDictionary = date
             //新建相册，并获取相册路径
-
-            let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
+            self.createAlbum()
             let downloadUrl = "http://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/\(dateDictionary["year"]!)/\(dateDictionary["month"]!)/\(dateDictionary["day"]!)/\(dateDictionary["hour"]!)\(dateDictionary["minute"]!)\(dateDictionary["second"]!)_0_0.png"
-            Alamofire.download(.GET, downloadUrl, destination: destination)
-                .response{  _, _, _, error in
-                    if let error = error {
-                        print("Failed with error: \(error)")
-                    } else {
-                        print("Downloaded file successfully")
-                        self.saveImgInAlbum("\(dateDictionary["hour"]!)\(dateDictionary["minute"]!)\(dateDictionary["second"]!)_0_0.png")
+            Alamofire.request(.GET, downloadUrl)
+                .responseImage { response in
+                    debugPrint(response)
+                    
+                    print(response.request)
+                    print(response.response)
+                    debugPrint(response.result)
+                    
+                    if let image = response.result.value {
+                        self.saveImgInAlbum(image)
                     }
-                }
+            }
             return "Success"
         }else{
-            print("Get Earth Date Fail:\(date["year"])")
+            print("Get Earth Date Fail")
             return "Fail"
         }
     }
     
-    func saveImgInAlbum(ImgName:String){
+    func createAlbum(){
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.predicate = NSPredicate(format: "title= %@", albumName)
+        let collection: PHFetchResult = PHAssetCollection.fetchAssetCollectionsWithType(.Album, subtype: .Any, options: fetchOptions)
         
+        if let _: AnyObject = collection.firstObject{
+            self.albumFound = true
+            assetCollection = collection.firstObject as! PHAssetCollection
+        }else{
+            PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+                let createAblumRequest: PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollectionWithTitle(self.albumName)
+                self.assetCollectionPlaceholder = createAblumRequest.placeholderForCreatedAssetCollection
+                }, completionHandler: { success, error in
+                    self.albumFound = (success ? true : false)
+                    
+                    if(success){
+                        let collectionFetchResult = PHAssetCollection.fetchAssetCollectionsWithLocalIdentifiers([self.assetCollectionPlaceholder.localIdentifier], options: nil)
+                        print(collectionFetchResult)
+                   self.assetCollection = collectionFetchResult.firstObject as! PHAssetCollection
+                    }
+            })
+        }
+    }
+    func saveImgInAlbum(image: UIImage){
+        if self.assetCollection != nil{
+            PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+                    let assetChangeRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
+                    let assetPlaceholder = assetChangeRequest.placeholderForCreatedAsset
+                    let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.assetCollection)
+                    albumChangeRequest?.addAssets([assetPlaceholder!])
+                }, completionHandler: nil)
+        }
     }
     
 }
